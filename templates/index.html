@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wine classifier</title>
+</head>
+<body>
+   
+    <div class="container">
+        <div class="name">wine classifier</div>
+        <form action="{{url_for('predict')}}" method="post">
+            <div class="card-details">
+                
+                <div class="card-box">
+                    <input type="text" name="fixed acidity" id="fixed acidity" placeholder="fixed acidity" required="required">
+                    
+                </div><br>
+
+
+                <div class="card-box">
+                    <input type="text" name="volatile acidity" id="volatile acidity" placeholder="volatile acidity"  required="required">
+
+                </div><br>
+
+
+                <div class="card-box">
+                    <input type="text" name="citric acid" id="citric acid" placeholder="citric acid" required="required">
+
+                </div><br>
+
+
+                <div class="card-box">
+                    <input type="text" name="chlorides" id="chlorides" placeholder="chlorides" required="required">
+
+                </div><br>
+
+
+                <div class="card-box">
+                    <input type="text" name="total sulfur dioxide" id="total sulfur dioxide" placeholder="total sulfur dioxide" required="required">
+
+                </div><br>
+
+
+                <div class="card-box">
+                    <input type="text" name="density" id="density" placeholder="density" required="required">
+
+                </div><br>
+
+                <div class="card-box">
+                    <input type="text" name="sulphates" id="sulphates" placeholder="fsulphates" required="required">
+
+                </div><br>
+
+                <div class="card-box">
+                    <input type="text" name="alcohol" id="alcohol" placeholder="alcohol" required="required">
+
+                </div><br>
+
+                <div class="btn">
+                    <button type="submit" class="submit">submit</button>
+
+                </div><br>
+                
+
+            </div>
+        </form>
+    </div>
+    <div class="jinja">{{classification_text}}</div> 
+</body>
+</html>
